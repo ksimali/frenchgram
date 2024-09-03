@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
+  searchQuery: string = '';
+
+  search() {
+    this.searchQuery = '';
+  }
+
+  // You can add a function here to filter data based on searchQuery
+  // e.g., filterItems() or something similar
 }
