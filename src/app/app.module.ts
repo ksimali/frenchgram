@@ -4,9 +4,10 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatIconModule} from '@angular/material/icon';
     AppRoutingModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
 
   ],
   providers: [
