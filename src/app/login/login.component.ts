@@ -9,6 +9,13 @@ import { UserService } from '../services/user.service';
 export class LoginComponent {
 
   constructor(private userService: UserService){
-
+    this.userService.login("cassim@gmail.com","654321").subscribe(
+      (res)=> {
+        console.log(res);
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 }
