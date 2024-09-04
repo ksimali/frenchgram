@@ -8,13 +8,12 @@ import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent,
-    LoginComponent
+    SearchComponent
   ],
   imports: [
     BrowserModule,
