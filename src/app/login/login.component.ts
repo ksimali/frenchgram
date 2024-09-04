@@ -17,17 +17,22 @@ export class LoginComponent {
       email: ['', Validators.required],
       password: ['', Validators.required]
     });
-    
+
   }
 
   onLogin(){
-    this.userService.login("cassim@gmail.com","654321").subscribe(
-      (res)=> {
-        console.log(res);
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    if(this.loginForm.valid){
+      //recuperer les infos du form
+      const{email, password} = this.loginForm.value;
+
+      this.userService.login(email, password).subscribe(
+        (res)=> {
+          console.log(res);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    } 
   }
 }
