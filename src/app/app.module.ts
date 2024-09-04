@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
+import { provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import { MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule} from '@angular/material/icon';
@@ -26,6 +27,7 @@ import { provideHttpClient } from '@angular/common/http';
   ],
   providers: [
     provideClientHydration(),
+    provideAnimationsAsync(),
     provideHttpClient()
   ],
   bootstrap: [AppComponent]
