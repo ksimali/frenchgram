@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UserService {
 
-  private apiUrl = 'https://french-verbs-fall-2023-app-ramym.ondigitalocean.app/v0/users/';
+  private apiUrl = 'https://seal-app-v5cj7.ondigitalocean.app/v0/users';
 
   constructor(private http: HttpClient) { }
 
