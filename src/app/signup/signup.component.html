@@ -1,1 +1,32 @@
-<p>signup works!</p>
+<div class="signup-container">
+    <mat-card>
+        <mat-card-title>Inscription</mat-card-title>
+        <form class="signup-form" [formGroup]="signupForm" (ngSubmit)="onSignup()">
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" type="email" />
+                <mat-error>email required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" type="text" />
+                <mat-error>name required</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" type="password">
+                <mat-error>password required</mat-error>
+            </mat-form-field>            
+            <mat-card-actions>
+                <div class="signup-button-container">
+                    <button class="form-button" mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">
+                        Inscription
+                    </button>
+                </div>      
+            </mat-card-actions>
+            
+        </form>
+        
+    </mat-card>
+</div>
+
