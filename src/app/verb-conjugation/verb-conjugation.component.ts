@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class VerbConjugationComponent {
 
+  // propriétés
+  searchText: string = '';
+
+  // get the value entered in searchBar and put in searchText proprety
+  onSearchTextEntered(searchValue: string){
+    this.searchText = searchValue;
+    console.log(this.searchText);
+  }
 }
