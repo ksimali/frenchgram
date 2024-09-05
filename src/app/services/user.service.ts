@@ -15,4 +15,9 @@ export class UserService {
   public login(email:string, password: string): Observable<any>{
     return this.http.post(`${this.apiUrl}/login`,{email, password});
   }
+
+  // Signup() method
+  public signup(email:string, name:string, password:string): Observable<any>{
+    return this.http.post(`${this.apiUrl}/signup`,{email, name, password});
+  }
 }
