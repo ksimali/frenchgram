@@ -16,13 +16,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { VerbConjugationComponent } from './verb-conjugation/verb-conjugation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    VerbConjugationComponent
   ],
   imports: [
     BrowserModule,
