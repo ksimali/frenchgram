@@ -6,15 +6,20 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class VerbApiService {
-  private apiUrl = 'https://seal-app-v5cj7.ondigitalocean.app/v0/verbs';
+  private apiUrl:string = 'https://seal-app-v5cj7.ondigitalocean.app/v0/verbs';
 
   constructor(private http: HttpClient) { }
 
-  getVerb(token: string): Observable<any>{
+  getVerb(token: string, verb: string): Observable<any>{
+    // defintion du header
     const headers = new HttpHeaders({
       'x-access-token': token
     });
+    // defintion du body
+    const body = {
+      verb,
+    }
 
-    return this.http.get(`${this.apiUrl}`,{headers});
+    return this.http.post(`${this.apiUrl}`, body, {headers});
   }
 }
