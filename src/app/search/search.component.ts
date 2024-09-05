@@ -1,18 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { VerbApiService } from '../services/verb-api.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit{
 
-  searchQuery: string = '';
+  //propriétés
+  enteredSearchValue: string = '';
 
-  search() {
-    this.searchQuery = '';
+  searchForm:FormGroup = new FormGroup({
+    search:new FormControl('')
+  });
+
+  constructor(){ }
+
+  ngOnInit(): void {
+    
   }
 
-  // You can add a function here to filter data based on searchQuery
-  // e.g., filterItems() or something similar
+  //create custom event
+  @Output()
+  searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
+
+  onSearchTextChanged(){
+    this.searchTextChanged.emit(this.enteredSearchValue);
+  }
+
 }

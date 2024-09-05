@@ -1,8 +1,12 @@
 <div class="search-container">
-    <mat-form-field appearance="outline">
-        <input matInput placeholder="Entrer un verbe...">
-        <button mat-icon-button matSuffix *ngIf="searchQuery" (click)="search()">
-            search
-        </button>
-      </mat-form-field>
+    <!-- for search field-->
+    <form [formGroup]="searchForm">
+        <mat-form-field appearance="outline">
+            <input matInput formControlName="search" 
+                type="text" name="" placeholder="Entrer un verbe..." 
+                [(ngModel)]="enteredSearchValue" 
+                (input)="onSearchTextChanged()">
+        </mat-form-field>
+    </form>
+    
 </div>
