@@ -27,9 +27,11 @@ export class LoginComponent {
 
       this.userService.login(email, password).subscribe(
         (res)=> {
+          alert('Connexion établit avec succès !');
           console.log(res);
         },
         (err) => {
+          alert('La connexion a échoué !');
           console.log(err);
         }
       );
