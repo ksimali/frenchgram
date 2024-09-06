@@ -1,19 +1,23 @@
 .search-container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
 }
+form{
+    display:flex;
+}
 
 mat-form-field {
     width: 500px;
+    margin-right:20px;
 }
-  
-input[matInput] {
-    padding: 10px; 
+mat-card-actions{
+    display: flex;
+
 }
-button{
-    padding:25%;
-    border-radius: 25%;
+.search-button-container{
+    padding-top:8px;
+    align-items: center;
+
 }

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { VerbApiService } from '../services/verb-api.service';
 
 @Component({
@@ -7,27 +7,32 @@ import { VerbApiService } from '../services/verb-api.service';
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
 })
-export class SearchComponent implements OnInit{
+export class SearchComponent{
 
-  //propriétés
-  enteredSearchValue: string = '';
+  searchForm:FormGroup;
 
-  searchForm:FormGroup = new FormGroup({
-    search:new FormControl('')
-  });
+  constructor(private verbApiService : VerbApiService, private fb: FormBuilder ){
+    this.searchForm = this.fb.group({
+      search: [''],
+    });
+   }
 
-  constructor(){ }
+  onSearch(){
+    if(this.searchForm.valid){
+      //recuperer les infos du form
+      const search = this.searchForm.value.search; // recuper la value direct et non l'objet
+      console.log(search);
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhc3NpbUBnbWFpbC5jb20iLCJ1aWQiOiI2NmQ4NzNlOThhZjNlNmQ5OWMyNmJhNTQiLCJleHAiOjE3MjgwNTg3OTB9.sm0L5C404aY-mb0yfUJlHAGRfyOjRNo9N9vK4WO1bOM";
 
-  ngOnInit(): void {
-    
-  }
-
-  //create custom event
-  @Output()
-  searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
-
-  onSearchTextChanged(){
-    this.searchTextChanged.emit(this.enteredSearchValue);
+      this.verbApiService.getVerb(token, search).subscribe(
+        (res)=> {
+          console.log(res);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    }
   }
 
 }
