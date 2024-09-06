@@ -10,8 +10,6 @@ import { Router } from 'express';
 })
 export class VerbConjugationComponent {
 
-  verbList: VerbApi[] = [];
-
   constructor(private verbApiService: VerbApiService){
 
   }
