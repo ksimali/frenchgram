@@ -1,0 +1,23 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+form{
+    display:flex;
+}
+
+mat-form-field {
+    width: 500px;
+    margin-right:20px;
+}
+mat-card-actions{
+    display: flex;
+
+}
+.search-button-container{
+    padding-top:8px;
+    align-items: center;
+
+}

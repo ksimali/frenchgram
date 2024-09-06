@@ -1,5 +1,19 @@
 
-<div>
-    <app-search></app-search>
+<div class="search-container">
+    <!-- for search field-->
+    <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
+        <mat-form-field appearance="outline">
+            <mat-label for="search">Verbe</mat-label>
+            <input matInput formControlName="search" type="text" name="" placeholder="Entrer un verbe..." />
+        </mat-form-field>
+        <mat-card-actions>
+            <div class="search-button-container">
+                <button class="form-button" mat-raised-button color="primary" type="submit" [disabled]="searchForm.invalid">
+                    Search
+                </button>
+            </div>      
+        </mat-card-actions>
+    </form>  
 </div>
+
 
