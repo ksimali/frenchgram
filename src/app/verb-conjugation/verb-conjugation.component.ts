@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { VerbApi } from '../models/verb-api.model';
+import { VerbApiService } from '../services/verb-api.service';
+import { Router } from 'express';
 
 @Component({
   selector: 'app-verb-conjugation',
@@ -7,12 +10,10 @@ import { Component } from '@angular/core';
 })
 export class VerbConjugationComponent {
 
-  // propriétés
-  searchText: string = '';
+  verbList: VerbApi[] = [];
 
-  // get the value entered in searchBar and put in searchText proprety
-  onSearchTextEntered(searchValue: string){
-    this.searchText = searchValue;
-    console.log(this.searchText);
+  constructor(private verbApiService: VerbApiService){
+
   }
+
 }
