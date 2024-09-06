@@ -12,6 +12,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class VerbConjugationComponent {
 
   searchForm:FormGroup;
+  verbConjugated: VerbApi[]=[];
 
   constructor(private verbApiService : VerbApiService, private fb: FormBuilder ){
     this.searchForm = this.fb.group({
@@ -28,7 +29,8 @@ export class VerbConjugationComponent {
 
       this.verbApiService.getVerb(token, search).subscribe(
         (res)=> {
-          console.log(res);
+          this.verbConjugated = res.verb;
+          console.log(this.verbConjugated);
         },
         (err) => {
           console.log(err);
