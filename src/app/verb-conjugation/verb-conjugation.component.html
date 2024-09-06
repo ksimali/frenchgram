@@ -13,7 +13,25 @@
                 </button>
             </div>      
         </mat-card-actions>
-    </form>  
+    </form> 
 </div>
 
+<!-- display conjugated verb-->
+<div class="display">
+    <!-- first we have to check if verbConjugated is empty or not-->
+    <ng-container *ngIf="verbConjugated.length; else notFound">
+        <div>
+            <h3> Verbe</h3>
+        </div>
+        
+    </ng-container>
 
+    <!-- not found -->
+    <ng-template #notFound>
+        <div>
+            Not found
+        </div>
+    </ng-template>
+
+</div>
+    

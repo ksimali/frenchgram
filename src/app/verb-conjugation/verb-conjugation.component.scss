@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    margin-top: 10%;
 }
 form{
     display:flex;
@@ -20,4 +20,9 @@ mat-card-actions{
     padding-top:8px;
     align-items: center;
 
+}
+
+.display{
+width: 80%;
+margin: 10px 20px 10px 20px;
 }
