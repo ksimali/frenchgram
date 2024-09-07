@@ -9,10 +9,24 @@ import { Router } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+// Propreties
   title = 'frenchgram';
 
-  constructor(private authService: AuthService, private router: Router){}
+  isAuth: boolean;
+// Constructor
+  constructor(private authService: AuthService, private router: Router){
+    //stocker le statut de l'utilisateur(connecté ou non) dans isAuth
+    this.isAuth = this.authService.isAuthenticated();
+    // creer un subscribe pour écouter le route a chaque changement et avoir le status du user 
+    router.events.subscribe(
+      ()=>{
+        this.isAuth = this.authService.isAuthenticated();
+      }
+    );
+  }
 
+// Methods
+  // logout() method to logout user
   logout(){
     this.authService.logout();
     alert("Vous avez été déconnecté avec succès!");
