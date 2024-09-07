@@ -14,7 +14,7 @@ export class SignupComponent {
   constructor(private userService: UserService, private fb: FormBuilder){
     // creation du form
     this.signupForm = this.fb.group({
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       name:['', Validators.required],
       password: ['', Validators.required]
     });
