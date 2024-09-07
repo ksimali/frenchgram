@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,7 @@ export class LoginComponent {
 
   loginForm: FormGroup;
 
-  constructor(private userService: UserService, private fb: FormBuilder){
+  constructor(private userService: UserService, private fb: FormBuilder, private authServce: AuthService, private router: Router){
     // creation du form
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -29,6 +31,8 @@ export class LoginComponent {
         (res)=> {
           alert('Connexion établit avec succès !');
           console.log(res);
+          this.authServce.setToken(res.token);
+          this.router.navigate(["/"]);
         },
         (err) => {
           alert('La connexion a échoué !');
