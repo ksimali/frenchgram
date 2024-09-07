@@ -1,10 +1,10 @@
 <header class="app-header">
   <nav>
     <ul class="nav-links">
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/login">Login</a></li>
-      <li><a routerLink="/signup">Signup</a></li>
-      <li><button (click)="logout()">Logout</button></li>
+      <li *ngIf="isAuth"><a routerLink="/">Home</a></li>
+      <li *ngIf="!isAuth"><a routerLink="/login">Login</a></li>
+      <li *ngIf="!isAuth"><a routerLink="/signup">Signup</a></li>
+      <li *ngIf="isAuth"><button (click)="logout()">Logout</button></li>
     </ul>
   </nav>
 </header>
