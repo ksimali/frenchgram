@@ -5,14 +5,16 @@ $color_navigation_link_hover: #dddd;
 $ambre : #f0c300;
 
 .app-header{
-    background-color: $ambre;
+    background: linear-gradient(135deg,$ambre 0%, #ffd700 100%, );
     display: flex;
-    padding: 1rem;
-    justify-content: end;
+    padding: 1rem 2rem;
+    justify-content: flex-end;
     align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 
     mat-toolbar{
         background-color: $ambre;
+        background: linear-gradient(135deg,$ambre 0%, #ffd700 100%, );
         display: flex;
         justify-content: space-between;
         .logo{
@@ -37,11 +39,32 @@ $ambre : #f0c300;
                 color: $color_navigation_link;
                 text-decoration: none;
                 font-weight: bold;
+                font-size: 1.1rem;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+
+                &:hover{
+                    color: $color_navigation_link_hover;
+                }
             }
 
-            &:hover{
-                color: $color_navigation_link_hover;
+            button{
+                color: $color_navigation_link;
+                border-radius: 15px;
+                background-color: orangered;
+                height: 30px;
+                border: none;
+                width: 100px;
+                font-size: 1rem;
+
+                &:hover {
+                    cursor: pointer;
+                    font-weight: bold;
+                    background-color: crimson;
+                }
             }
+            
+  
         }
     }
 }
