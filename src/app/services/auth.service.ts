@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class AuthService {
   setToken(token: string){
     sessionStorage.setItem("authToken", token);
   }
-  constructor() { }
+  constructor(@Inject(PLATFORM_ID) private platformId: any) { } // verifier si on est déjà dans le browser
 
   logout(){
     sessionStorage.removeItem("authToken"); //accès au sessionStorage et effacer le token
@@ -22,8 +22,8 @@ export class AuthService {
 
   // créer des conditions pour limiter l'accès de l'utilisateur
   isAuthenticated(): boolean{
-    if(this.getToken()){
-      return true;
+    if(isPlatformBrowser(this.platformId)){
+      return !!this.getToken();
     }
     return false;
   }
