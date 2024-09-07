@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { VerbApiService } from '../services/verb-api.service';
+import { VerbApi } from '../models/verb-api.model';
 
 @Component({
   selector: 'app-search',
@@ -10,6 +11,7 @@ import { VerbApiService } from '../services/verb-api.service';
 export class SearchComponent{
 
   searchForm:FormGroup;
+  conjugatedVerb: VerbApi[]= [];
 
   constructor(private verbApiService : VerbApiService, private fb: FormBuilder ){
     this.searchForm = this.fb.group({
@@ -26,7 +28,8 @@ export class SearchComponent{
 
       this.verbApiService.getVerb(token, search).subscribe(
         (res)=> {
-          console.log(res);
+          this.conjugatedVerb = res.verb;
+          console.log(this.conjugatedVerb);
         },
         (err) => {
           console.log(err);
