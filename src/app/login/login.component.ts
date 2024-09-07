@@ -7,13 +7,13 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
 
   loginForm: FormGroup;
 
-  constructor(private userService: UserService, private fb: FormBuilder, private authServce: AuthService, private router: Router){
+  constructor(private userService: UserService, private fb: FormBuilder, private authService: AuthService, private router: Router){
     // creation du form
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
@@ -31,7 +31,7 @@ export class LoginComponent {
         (res)=> {
           alert('Connexion établit avec succès !');
           console.log(res);
-          this.authServce.setToken(res.token);
+          this.authService.setToken(res.token);
           this.router.navigate(["/"]);
         },
         (err) => {
