@@ -11,6 +11,20 @@ $ambre : #f0c300;
     justify-content: end;
     align-items: center;
 
+    mat-toolbar{
+        background-color: $ambre;
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo-link{
+            text-decoration: none;
+            color: $color_navigation_link;
+            font-weight: bold;
+        }
+    }
     nav{
         .nav-links{
             list-style: none;
