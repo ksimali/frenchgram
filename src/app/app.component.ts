@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frenchgram';
+
+  constructor(private authService: AuthService, private router: Router){}
+
+  logout(){
+    this.authService.logout();
+    alert("Vous avez été déconnecté avec succès!");
+    this.router.navigate(["/login"]);
+  }
 }
