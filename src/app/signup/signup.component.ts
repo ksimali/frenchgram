@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +12,7 @@ export class SignupComponent {
 
   signupForm: FormGroup;
 
-  constructor(private userService: UserService, private fb: FormBuilder){
+  constructor(private userService: UserService, private fb: FormBuilder, private router: Router){
     // creation du form
     this.signupForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -27,11 +28,11 @@ export class SignupComponent {
 
       this.userService.signup(email, name, password).subscribe(
         (res)=> {
-          alert(`${name} a bien été inscrit avec succès!`);
           console.log(res);
+          this.router.navigate(['/login']);
         },
         (err) => {
-          alert("L'inscription à échoué!");
+          alert("L'inscirption a échoué !");
           console.log(err);
         }
       );
