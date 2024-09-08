@@ -1,1 +1,46 @@
-<p>verb-display works!</p>
+<div *ngIf="verb">
+    <h1>{{ verb.verb }}</h1>
+  
+    <h2>Indicatif</h2>
+    <h3>Présent</h3>
+    <p><strong>Je:</strong> {{ verb.indicatif.present.indicatifPresentI }}</p>
+    <p><strong>Il/elle/on:</strong> {{ verb.indicatif.present.indicatifPresentHeSheIt }}</p>
+    <p><strong>Ils/elles:</strong> {{ verb.indicatif.present.indicatifPresentThey }}</p>
+    <p><strong>Nous:</strong> {{ verb.indicatif.present.indicatifPresentWe }}</p>
+    <p><strong>Tu:</strong> {{ verb.indicatif.present.indicatifPresentYou }}</p>
+    <p><strong>Vous:</strong> {{ verb.indicatif.present.indicatifPresentYouAll }}</p>
+  
+    <h3>Imparfait</h3>
+    <p><strong>Je:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitI }}</p>
+    <p><strong>Il/elle/on:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitHeSheIt }}</p>
+    <p><strong>Ils/elles:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitThey }}</p>
+    <p><strong>Nous:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitWe }}</p>
+    <p><strong>Tu:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitYou }}</p>
+    <p><strong>Vous:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitYouAll }}</p>
+  
+    <!-- Ajoutez d'autres sections pour les autres temps et modes (Conditionnel, Subjonctif, etc.) -->
+  
+    <h2>Conditionnel</h2>
+    <h3>Présent</h3>
+    <p><strong>Je:</strong> {{ verb.conditionnel.present.conditionnelPresentI }}</p>
+    <p><strong>Il/elle/on:</strong> {{ verb.conditionnel.present.conditionnelPresentHeSheIt }}</p>
+    <p><strong>Ils/elles:</strong> {{ verb.conditionnel.present.conditionnelPresentThey }}</p>
+    <p><strong>Nous:</strong> {{ verb.conditionnel.present.conditionnelPresentWe }}</p>
+    <p><strong>Tu:</strong> {{ verb.conditionnel.present.conditionnelPresentYou }}</p>
+    <p><strong>Vous:</strong> {{ verb.conditionnel.present.conditionnelPresentYouAll }}</p>
+  
+    <!-- Ajoutez des sections similaires pour les autres formes du conditionnel -->
+  
+    <h2>Subjonctif</h2>
+    <h3>Présent</h3>
+    <p><strong>Je:</strong> {{ verb.subjonctif.present.subjonctifPresentI }}</p>
+    <p><strong>Il/elle/on:</strong> {{ verb.subjonctif.present.subjonctifPresentHeSheIt }}</p>
+    <p><strong>Ils/elles:</strong> {{ verb.subjonctif.present.subjonctifPresentThey }}</p>
+    <p><strong>Nous:</strong> {{ verb.subjonctif.present.subjonctifPresentWe }}</p>
+    <p><strong>Tu:</strong> {{ verb.subjonctif.present.subjonctifPresentYou }}</p>
+    <p><strong>Vous:</strong> {{ verb.subjonctif.present.subjonctifPresentYouAll }}</p>
+  
+    <!-- Ajoutez des sections similaires pour les autres formes du subjonctif -->
+  
+  </div>
+  
