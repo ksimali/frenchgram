@@ -13,5 +13,9 @@
             </div>      
         </mat-card-actions>
     </form>
-    
+</div>
+
+<div *ngIf="verbData">
+    <!-- Affichage des données du verbe -->
+    <app-verb-display [verb]="verbData"></app-verb-display>
 </div>
