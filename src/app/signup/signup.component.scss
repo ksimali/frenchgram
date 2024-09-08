@@ -1,8 +1,17 @@
+$ambre : #f0c300;
+
 .signup-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+mat-card {
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 120px 25px 120px 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .signup-form{
@@ -13,11 +22,11 @@ mat-form-field{
     width: 100%;
 }
 
-mat-card-title,
-mat-card-content{
+mat-card-title{
+    color: $ambre;
     margin-top: 30px;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .signup-button-container{

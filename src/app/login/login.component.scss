@@ -1,24 +1,31 @@
+$ambre : #f0c300;
+
 .login-container{
     display:flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 }
-.login-form{
-    padding: 20px;
+mat-card {
+    max-width: 400px;
+    padding: 25px 50px 25px 50px;
+    border-radius: 120px 25px 120px 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 mat-form-field{
     width: 100%;
 }
-mat-card-title,
-mat-card-content{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+mat-card-title{
+    color: $ambre;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
+
 .login-button-container {
     display: flex;
     width: 100%;
     justify-content: flex-end;
-
 }
+
