@@ -1,27 +1,30 @@
-# Frenchgram
+# frenchgram
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+Le projet frenchgram est une application en Angular utilisant l'API des verbes français. L'application doit authentifier les utilisateurs via une connexion et leur permettre d'effectuer des opérations avec les verbes, en utilisant différents points de terminaison de l'API.
 
-## Development server
+Exigences du Projet:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1.Authentification de l'Utilisateur :
 
-## Code scaffolding
+    • Connexion et Inscription : L'application doit permettre aux utilisateurs de       s'inscrire et de se connecter en utilisant l'API. L'implémentation des interfaces de  connexion et d'inscription doit être personnalisée pour refléter le thème et la fonctionnalité de l'application créée par les étudiants.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2.Utilisation Obligatoire des Points de Terminaison de l'API :
 
-## Build
+    • Récupérer un Verbe Spécifique (Obligatoire) : L'application doit obligatoirement inclure une fonctionnalité permettant aux utilisateurs de consulter des informations sur un verbe spécifique en utilisant le point de terminaison
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    • Choix d'au Moins Deux Autres Points de Terminaison : En plus du point de terminaison pour récupérer un verbe spécifique, les étudiants doivent choisir au moins deux autres points de terminaison de l'API à intégrer dans leur application. Les possibilités sont larges et dépendent de la proposition du projet développé par les étudiants.
 
-## Running unit tests
+3. Présentation Visuelle :
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    • Personnalisation de l'Interface : Bien que le projet initial fournisse une base fonctionnelle, l'interface utilisateur (UI) doit être entièrement adaptée. Cela inclut l'ajout d'images, de styles, de couleurs et tout autre élément visuel qui rend l'application unique et alignée sur le thème choisi.
 
-## Running end-to-end tests
+    • Expérience Utilisateur (UX) : L'expérience d'utilisation de l'application doit être agréable et intuitive. Réfléchissez à la manière dont les utilisateurs interagissent avec l'application, depuis la connexion jusqu'aux opérations avec les verbes.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Type d'application choisi: Consultation de Conjugaison 
 
-## Further help
+  • Description : Une application qui permet aux utilisateurs de consulter la conjugaison complète d'un verbe à tous les temps verbaux.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+  • Fonctionnalités :
+    ▪ Les utilisateurs saisissent un verbe et l'application affiche la conjugaison complète pour chaque temps verbal.
+    ▪ Utilisez le point de terminaison pour récupérer le verbe et afficher toutes les conjugaisons possibles.
+    ▪ Ajoutez des fonctionnalités supplémentaires comme la sauvegarde de verbes favoris pour des consultations rapides.
