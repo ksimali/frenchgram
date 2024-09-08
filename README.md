@@ -42,8 +42,11 @@ Type d'application choisi: Consultation de Conjugaison
 
   • Fonctionnalités :
 
-    ▪ Les utilisateurs saisissent un verbe et l'application affiche la conjugaison    complète pour chaque temps verbal.
+    . Les utilisateurs saisissent un verbe et l'application affiche
+      la conjugaison complète pour chaque temps verbal.
 
-    ▪ Utilisez le point de terminaison pour récupérer le verbe et afficher toutes les conjugaisons possibles.
+    . Utilisez le point de terminaison pour récupérer le verbe et,
+      afficher toutes les conjugaisons possibles.
 
-    ▪ Ajoutez des fonctionnalités supplémentaires comme la sauvegarde de verbes favoris pour des consultations rapides.
+    . Ajoutez des fonctionnalités supplémentaires comme la sauvegarde
+      de verbes favoris pour des consultations rapides.
