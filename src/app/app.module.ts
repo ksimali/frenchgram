@@ -18,6 +18,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { VerbConjugationComponent } from './verb-conjugation/verb-conjugation.component';
+import { VerbDisplayComponent } from './verb-display/verb-display.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { VerbConjugationComponent } from './verb-conjugation/verb-conjugation.co
     SearchComponent,
     LoginComponent,
     SignupComponent,
-    VerbConjugationComponent
+    VerbConjugationComponent,
+    VerbDisplayComponent
   ],
   imports: [
     BrowserModule,
