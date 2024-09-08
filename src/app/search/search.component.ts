@@ -11,7 +11,7 @@ import { VerbApi } from '../models/verb-api.model';
 export class SearchComponent{
 
   searchForm:FormGroup;
-  conjugatedVerb: VerbApi[]= [];
+  verbData: VerbApi | undefined;
 
   constructor(private verbApiService : VerbApiService, private fb: FormBuilder ){
     this.searchForm = this.fb.group({
@@ -28,8 +28,8 @@ export class SearchComponent{
 
       this.verbApiService.getVerb(token, search).subscribe(
         (res)=> {
-          this.conjugatedVerb = res.verb;
-          console.log(this.conjugatedVerb);
+          this.verbData = res.verb;
+          console.log(this.verbData);
         },
         (err) => {
           console.log(err);
