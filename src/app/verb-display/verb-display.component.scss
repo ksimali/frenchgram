@@ -24,3 +24,15 @@ $whitesmoke : #F5F5F5;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+    .verb-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .verb-card {
+        flex: 1 1 100%; /* Full width for small screens */
+    }
+}
