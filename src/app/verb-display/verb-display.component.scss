@@ -1,0 +1,23 @@
+$whitesmoke : #F5F5F5;
+.verb-container {
+    background-color: $whitesmoke;
+    padding: 30px;
+}
+
+.mode{
+  padding-top: 40px;
+}
+.verb-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; //add spacing between cards
+}
+.verb-card{
+    width: 300px;
+    padding: 20px;
+    flex: 1 1 calc(25% - 20px); /* 4 cards per row with margin */
+    margin: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}

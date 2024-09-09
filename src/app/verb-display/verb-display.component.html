@@ -1,45 +1,175 @@
-<div *ngIf="verb">
-    <h1>{{ verb.verb }}</h1>
+<div class="verb-container" *ngIf="verb">
+    <h1>Verbe : {{ verb.verb }}</h1>
+    <span class="description">{{verb.fullDescription}}</span>
+    <!-- temps et modes de l'indicatif -->
+    <h2 class="mode">Indicatif</h2>
+    <div class="verb-list">
+        <mat-card class="verb-card">
+            <h5 class="temps">Présent</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.present.indicatifPresentI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.present.indicatifPresentYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.present.indicatifPresentHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.present.indicatifPresentWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.present.indicatifPresentYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.present.indicatifPresentThey }}</p>
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5 class="temps">Passé simple</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.passeSimple.indicatifPasseSimpleI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.passeSimple.indicatifPasseSimpleYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.passeSimple.indicatifPasseSimpleHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.passeSimple.indicatifPasseSimpleWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.passeSimple.indicatifPasseSimpleYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.passeSimple.indicatifPasseSimpleThey }}</p>
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5 class="temps">Passé composé</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.passeCompose.indicatifPasseComposeI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.passeCompose.indicatifPasseComposeYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.passeCompose.indicatifPasseComposeHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.passeCompose.indicatifPasseComposeWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.passeCompose.indicatifPasseComposeYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.passeCompose.indicatifPasseComposeThey }}</p>
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5 class="temps">Imparfait</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitThey }}</p>
+        </mat-card> 
+        <mat-card class="verb-card">
+            <h5 class="temps">Futur simple</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.futurSimple.indicatifFuturSimpleI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.futurSimple.indicatifFuturSimpleYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.futurSimple.indicatifFuturSimpleHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.futurSimple.indicatifFuturSimpleWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.futurSimple.indicatifFuturSimpleYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.futurSimple.indicatifFuturSimpleThey }}</p>
+        </mat-card> 
+        <mat-card class="verb-card">
+            <h5 class="temps">Futur antérieur</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.futurAnterieur.indicatifFuturAnterieurI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.futurAnterieur.indicatifFuturAnterieurYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.futurAnterieur.indicatifFuturAnterieurHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.futurAnterieur.indicatifFuturAnterieurWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.futurAnterieur.indicatifFuturAnterieurYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.futurAnterieur.indicatifFuturAnterieurThey }}</p>
+        </mat-card> 
+        <mat-card class="verb-card">
+            <h5 class="temps">Passé antérieur</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.passeAnterieur.indicatifPasseAnterieurI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.passeAnterieur.indicatifPasseAnterieurYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.passeAnterieur.indicatifPasseAnterieurHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.passeAnterieur.indicatifPasseAnterieurWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.passeAnterieur.indicatifPasseAnterieurYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.passeAnterieur.indicatifPasseAnterieurThey }}</p>
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5 class="temps">Plus-que-parfait</h5>
+            <p><strong>Je:</strong> {{ verb.indicatif.plusQueParfait.indicatifPlusQueParfaitI }}</p>
+            <p><strong>Tu:</strong> {{ verb.indicatif.plusQueParfait.indicatifPlusQueParfaitYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.indicatif.plusQueParfait.indicatifPlusQueParfaitHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.indicatif.plusQueParfait.indicatifPlusQueParfaitWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.indicatif.plusQueParfait.indicatifPlusQueParfaitYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.indicatif.plusQueParfait.indicatifPlusQueParfaitThey }}</p>
+        </mat-card>
+    </div>
+        
+        
+    <!-- temps et modes du Conditionnel -->
+    <h2 class="mode">Conditionnel</h2>
+    <div class="verb-list">
+        <mat-card class="verb-card">
+            <h5>Présent</h5>
+            <p><strong>Je:</strong> {{ verb.conditionnel.present.conditionnelPresentI }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.conditionnel.present.conditionnelPresentHeSheIt }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.conditionnel.present.conditionnelPresentThey }}</p>
+            <p><strong>Nous:</strong> {{ verb.conditionnel.present.conditionnelPresentWe }}</p>
+            <p><strong>Tu:</strong> {{ verb.conditionnel.present.conditionnelPresentYou }}</p>
+            <p><strong>Vous:</strong> {{ verb.conditionnel.present.conditionnelPresentYouAll }}</p>        
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5>Passé 1ère forme</h5>
+            <p><strong>Je:</strong> {{ verb.conditionnel.passe1reForme.conditionnelPasse1reFormeI }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.conditionnel.passe1reForme.conditionnelPasse1reFormeHeSheIt }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.conditionnel.passe1reForme.conditionnelPasse1reFormeThey }}</p>
+            <p><strong>Nous:</strong> {{ verb.conditionnel.passe1reForme.conditionnelPasse1reFormeWe }}</p>
+            <p><strong>Tu:</strong> {{ verb.conditionnel.passe1reForme.conditionnelPasse1reFormeYou }}</p>
+            <p><strong>Vous:</strong> {{ verb.conditionnel.passe1reForme.conditionnelPasse1reFormeYouAll }}</p> 
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5>Passé 2ème forme</h5>
+            <p><strong>Je:</strong> {{ verb.conditionnel.passe2eForme.conditionnelPasse2eFormeI }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.conditionnel.passe2eForme.conditionnelPasse2eFormeHeSheIt }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.conditionnel.passe2eForme.conditionnelPasse2eFormeThey }}</p>
+            <p><strong>Nous:</strong> {{ verb.conditionnel.passe2eForme.conditionnelPasse2eFormeWe }}</p>
+            <p><strong>Tu:</strong> {{ verb.conditionnel.passe2eForme.conditionnelPasse2eFormeYou }}</p>
+            <p><strong>Vous:</strong> {{ verb.conditionnel.passe2eForme.conditionnelPasse2eFormeYouAll }}</p>
+        </mat-card>
+    </div>
+ 
+    <!-- temps et modes de l'imperatif -->
+    <h2 class="mode">Imperatif</h2>
+    <div class="verb-list">
+        <mat-card class="verb-card">
+            <h5>Présent</h5>
+            <p><strong>tu:</strong> {{ verb.imperatif.present.imperatifPresentFirst }}</p>
+            <p><strong>nous:</strong> {{ verb.imperatif.present.imperatifPresentSecond}}</p>
+            <p><strong>vous:</strong> {{verb.imperatif.present.imperatifPresentThird}}</p>
+        </mat-card>
+
+        <mat-card class="verb-card">
+            <h5>Passé</h5>
+            <p><strong>tu:</strong> {{ verb.imperatif.passe.imperatifPasseFirst }}</p>
+            <p><strong>nous:</strong> {{ verb.imperatif.passe.imperatifPasseSecond}}</p>
+            <p><strong>vous:</strong>{{verb.imperatif.passe.imperatifPasseThird}}</p>
+        </mat-card>
+    </div>
+    <!-- temps et modes du Subjonctif -->
   
-    <h2>Indicatif</h2>
-    <h3>Présent</h3>
-    <p><strong>Je:</strong> {{ verb.indicatif.present.indicatifPresentI }}</p>
-    <p><strong>Il/elle/on:</strong> {{ verb.indicatif.present.indicatifPresentHeSheIt }}</p>
-    <p><strong>Ils/elles:</strong> {{ verb.indicatif.present.indicatifPresentThey }}</p>
-    <p><strong>Nous:</strong> {{ verb.indicatif.present.indicatifPresentWe }}</p>
-    <p><strong>Tu:</strong> {{ verb.indicatif.present.indicatifPresentYou }}</p>
-    <p><strong>Vous:</strong> {{ verb.indicatif.present.indicatifPresentYouAll }}</p>
-  
-    <h3>Imparfait</h3>
-    <p><strong>Je:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitI }}</p>
-    <p><strong>Il/elle/on:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitHeSheIt }}</p>
-    <p><strong>Ils/elles:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitThey }}</p>
-    <p><strong>Nous:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitWe }}</p>
-    <p><strong>Tu:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitYou }}</p>
-    <p><strong>Vous:</strong> {{ verb.indicatif.imparfait.indicatifImparfaitYouAll }}</p>
-  
-    <!-- Ajoutez d'autres sections pour les autres temps et modes (Conditionnel, Subjonctif, etc.) -->
-  
-    <h2>Conditionnel</h2>
-    <h3>Présent</h3>
-    <p><strong>Je:</strong> {{ verb.conditionnel.present.conditionnelPresentI }}</p>
-    <p><strong>Il/elle/on:</strong> {{ verb.conditionnel.present.conditionnelPresentHeSheIt }}</p>
-    <p><strong>Ils/elles:</strong> {{ verb.conditionnel.present.conditionnelPresentThey }}</p>
-    <p><strong>Nous:</strong> {{ verb.conditionnel.present.conditionnelPresentWe }}</p>
-    <p><strong>Tu:</strong> {{ verb.conditionnel.present.conditionnelPresentYou }}</p>
-    <p><strong>Vous:</strong> {{ verb.conditionnel.present.conditionnelPresentYouAll }}</p>
-  
-    <!-- Ajoutez des sections similaires pour les autres formes du conditionnel -->
-  
-    <h2>Subjonctif</h2>
-    <h3>Présent</h3>
-    <p><strong>Je:</strong> {{ verb.subjonctif.present.subjonctifPresentI }}</p>
-    <p><strong>Il/elle/on:</strong> {{ verb.subjonctif.present.subjonctifPresentHeSheIt }}</p>
-    <p><strong>Ils/elles:</strong> {{ verb.subjonctif.present.subjonctifPresentThey }}</p>
-    <p><strong>Nous:</strong> {{ verb.subjonctif.present.subjonctifPresentWe }}</p>
-    <p><strong>Tu:</strong> {{ verb.subjonctif.present.subjonctifPresentYou }}</p>
-    <p><strong>Vous:</strong> {{ verb.subjonctif.present.subjonctifPresentYouAll }}</p>
-  
+    <h2 class="mode">Subjonctif</h2>
+    <div class="verb-list">
+        <mat-card class="verb-card">
+            <h5>Présent</h5>
+            <p><strong>Je:</strong> {{ verb.subjonctif.present.subjonctifPresentI }}</p>
+            <p><strong>Tu:</strong> {{ verb.subjonctif.present.subjonctifPresentYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.subjonctif.present.subjonctifPresentHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.subjonctif.present.subjonctifPresentWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.subjonctif.present.subjonctifPresentYouAll }}</p>
+            <p><strong>Ils/elles:</strong> {{ verb.subjonctif.present.subjonctifPresentThey }}</p>        
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5>Passé</h5>
+            <p><strong>Je:</strong> {{ verb.subjonctif.passe.subjonctifPasseI }}</p>
+            <p><strong>Tu:</strong> {{ verb.subjonctif.passe.subjonctifPasseYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.subjonctif.passe.subjonctifPasseHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.subjonctif.passe.subjonctifPasseWe }}</p>     
+            <p><strong>Vous:</strong> {{ verb.subjonctif.passe.subjonctifPasseYouAll }}</p>        
+            <p><strong>Ils/elles:</strong> {{ verb.subjonctif.passe.subjonctifPasseThey }}</p>
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5>Imparfait</h5>
+            <p><strong>Je:</strong> {{ verb.subjonctif.imparfait.subjonctifImparfaitI }}</p>
+            <p><strong>Tu:</strong> {{ verb.subjonctif.imparfait.subjonctifImparfaitYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.subjonctif.imparfait.subjonctifImparfaitHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.subjonctif.imparfait.subjonctifImparfaitWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.subjonctif.imparfait.subjonctifImparfaitYouAll }}</p>        
+            <p><strong>Ils/elles:</strong> {{ verb.subjonctif.imparfait.subjonctifImparfaitThey }}</p>
+        </mat-card>
+        <mat-card class="verb-card">
+            <h5>Plus-que-parfait</h5>
+            <p><strong>Je:</strong> {{ verb.subjonctif.plusQueParfait.subjonctifPlusQueParfaitI }}</p>
+            <p><strong>Tu:</strong> {{ verb.subjonctif.plusQueParfait.subjonctifPlusQueParfaitYou }}</p>
+            <p><strong>Il/elle/on:</strong> {{ verb.subjonctif.plusQueParfait.subjonctifPlusQueParfaitHeSheIt }}</p>
+            <p><strong>Nous:</strong> {{ verb.subjonctif.plusQueParfait.subjonctifPlusQueParfaitWe }}</p>
+            <p><strong>Vous:</strong> {{ verb.subjonctif.plusQueParfait.subjonctifPlusQueParfaitYouAll }}</p>        
+            <p><strong>Ils/elles:</strong> {{ verb.subjonctif.plusQueParfait.subjonctifPlusQueParfaitThey }}</p>
+        </mat-card>
+    </div>
+   
     <!-- Ajoutez des sections similaires pour les autres formes du subjonctif -->
   
   </div>
